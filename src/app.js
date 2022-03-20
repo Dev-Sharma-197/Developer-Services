@@ -6,9 +6,6 @@ const app = express();
 const User = require("./models/contact");
 const port = process.env.PORT || 2000;
 
-app.use("/css", express.static(path.join(__dirname, "../node_modules/bootstrap/dist/css")));
-app.use("/js", express.static(path.join(__dirname, "../node_modules/bootstrap/dist/js")));
-app.use("/jq", express.static(path.join(__dirname, "../node_modules/jquery/dist")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "../public")));
 app.set("view engine", "hbs");
